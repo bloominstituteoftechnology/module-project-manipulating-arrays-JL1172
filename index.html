@@ -53,8 +53,27 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
     function stripVowels(str) {
+      
+      let result45 = [];
+      let arr1 = [];
+      arr1 = str.split('')
+      let chars = ('a','e','i','o','u');
+      let result60 = '';
+      
 
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i]!=='a'&&arr1[i]!=='e'&&arr1[i]!=='i'&&arr1[i]!=='o'&&arr1[i]!=='u') {
+          
+          result45.push(arr1[i]);
+             
+        }
+      }
+      let result50 = result45.toString();
+      result60 += result50
+      return result60;
     }
+    
+    
 
     // 👉 CHALLENGE 3
     // 🧠 Reimplement sumNumsFor using a while loop instead of a for loop.
