@@ -187,8 +187,28 @@
     // 🧠 The "tail" prop contains an array holding the elements of the array after the first one.
     // 🧠 Examples of usage:
     // headAndTail([1, 2, 3]) // should return { head: 1, tail: [2, 3] }
-    function headAndTail() {
-      
+    function headAndTail(heTa) {
+      let prop1=0;
+      let propS='';
+      let prop2 = [];
+      let obj = {};
+       
+      for (let i = 0; i < 1; i++) {
+        if (typeof heTa[i]==='number') {
+            prop1 += (heTa[i]);
+            obj['head'] = prop1
+        } else if (typeof heTa[i]==='string') {
+            propS += (heTa[i]);
+            obj['head'] = propS
+        } 
+
+        for (let i = 1; i < 3; i++) {
+          prop2.push(heTa[i]);
+          obj['tail']=prop2;
+        }       
+
+      } return obj; 
+
     }
 
     // 👉 CHALLENGE 8
