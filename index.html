@@ -118,21 +118,23 @@
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters(lifePoints) {
-      let stringReturn; 
-      let result= 0;
-      let array_1 = []
-      array_1.push(lifePoints); 
+      
+      let result = ''; 
 
-        let i = 0;
-        while (i <= array_1.length && array_1[i] > 0) {
-          lifePoints -= i
-          i --
-          return lifePoints
-          break; 
-        }
+      let round = 1; 
+      while (lifePoints>0) {
+        lifePoints -= round;
+        
+
+        if (lifePoints<=0) {
+        return `You died in round ${round}`
+      }
+      
+      round++
 
 
-
+      }
+      
       }
     
 
@@ -218,8 +220,18 @@
     // nestedLoops(['hello', 'goodbye']) // should return ['hEllO', 'gOOdbyE']
     // ❗ Notes:
     // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
-    function nestedLoops(arrOfStr) {
+    function nestedLoops(str) {
+    let newStr = str.toString();
+   
+    let newArray = [];
+    
 
+      newArray.push(newStr.toLowerCase().replace(/[aeiou]/g, function(l) {
+      return(l).toUpperCase()}));
+      
+      let newStrng = newArray.toString(); 
+      let c = newStrng.split(',');
+      return c;
       
     }
 
